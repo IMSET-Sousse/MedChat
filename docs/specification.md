@@ -1,4 +1,12 @@
 # Specification
+<<<<<<< HEAD
+=======
+
+## Étude des concurrents existants:
+
+### Concurrents existants
+- Woebot Health: Woebot Health est un pionnier dans le domaine des chatbots thérapeutiques. Il utilise l'intelligence artificielle pour offrir des thérapies cognitivo-comportementales (TCC) personnalisées. Le chatbot est capable de reconnaître les émotions, d'engager des conversations significatives et de fournir des exercices pratiques pour aider les utilisateurs à gérer le stress, l'anxiété et la dépression.
+>>>>>>> c958815ca611891d9468647d6ed17bee04dd7c97
 
 ## Étude des concurrents existants
 
@@ -26,6 +34,7 @@ Le chatbot est capable de reconnaître les émotions, d'engager des conversation
 
 - **Florence**: Florence se concentre sur le suivi des maladies chroniques et la gestion des traitements. Il est conçu pour aider les patients à prendre leurs médicaments à l'heure, à suivre leurs symptômes et à communiquer avec leurs médecins. Le chatbot est capable de répondre à des questions sur les traitements, de fournir des rappels personnalisés et d'offrir un soutien émotionnel.
 
+<<<<<<< HEAD
    - Points forts:
     Spécialisation dans la gestion des maladies chroniques
     Intégration avec les dossiers médicaux
@@ -120,3 +129,6 @@ Windows Server with:
 - Python 12
 - NodeJs 22 LTS
 - PostgreSQL 16 Server
+=======
+## Besoins fonctionnels
+>>>>>>> c958815ca611891d9468647d6ed17bee04dd7c97
