@@ -5,6 +5,7 @@ Concurrents existants
 
 Points forts:
 Spécialisation dans la santé mentale
+
 Points faibles:
 Offre peut-être moins complète pour d'autres types de problèmes de santé
 Disponibilité limitée dans certaines régions
@@ -15,6 +16,7 @@ Points forts:
 Approche holistique du bien-être
 Intégration de techniques de relaxation
 Personnalisation avancée
+
 Points faibles:
 Peut être moins adapté aux personnes souffrant de troubles mentaux sévères
 Offre peut-être moins de fonctionnalités de suivi médical
@@ -25,6 +27,7 @@ Points forts:
 Spécialisation dans la gestion des maladies chroniques
 Intégration avec les dossiers médicaux
 Fonctionnalités de suivi personnalisées
+
 Points faibles:
 Peut être moins adapté aux personnes en bonne santé ou souffrant de maladies aiguës
 Offre peut-être moins de fonctionnalités de diagnostic
