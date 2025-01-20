@@ -1,6 +1,8 @@
-Specification
-Étude des concurrents existants:
-Concurrents existants
+# Specification
+
+## Étude des concurrents existants:
+
+### Concurrents existants
 - Woebot Health: Woebot Health est un pionnier dans le domaine des chatbots thérapeutiques. Il utilise l'intelligence artificielle pour offrir des thérapies cognitivo-comportementales (TCC) personnalisées. Le chatbot est capable de reconnaître les émotions, d'engager des conversations significatives et de fournir des exercices pratiques pour aider les utilisateurs à gérer le stress, l'anxiété et la dépression.
 
 Points forts:
@@ -32,4 +34,4 @@ Points faibles:
 Peut être moins adapté aux personnes en bonne santé ou souffrant de maladies aiguës
 Offre peut-être moins de fonctionnalités de diagnostic
 
-Besoins fonctionnels
+## Besoins fonctionnels

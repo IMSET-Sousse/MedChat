@@ -1,8 +1,6 @@
-# MedChat
-Description du projet :
-MedChatBot est une plateforme innovante de chatbot alimentée par l'IA conçue pour autonomiser les étudiants, les médecins et les professionnels de la santé tout au long de leur parcours.
+# cahier des charges
 
-Concurrents majeurs et leurs caractéristiques :
+## Concurrents majeurs et leurs caractéristiques :
 
 +Babylon Health :Image of Babylon Health app interface
 -Un des leaders du marché, Babylon Health propose des consultations médicales à distance via chatbot, ainsi qu'un suivi personnalisé des patients.
