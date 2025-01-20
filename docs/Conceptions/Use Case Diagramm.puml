@@ -1,0 +1,11 @@
+@startuml use_case_diagram
+actor Internaute
+actor Utilisateur
+
+Internaute --> (S'inscrire)
+Utilisateur --> (Se connecter)
+Utilisateur --> (Nouveau Chat)
+Utilisateur --> (Poser Question)
+Utilisateur --> (Accéder à l'Historique)
+
+@enduml

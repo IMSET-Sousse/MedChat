@@ -36,7 +36,7 @@ Le chatbot est capable de reconnaître les émotions, d'engager des conversation
 
 ## Besoins fonctionnels
 
-![Use Case Diagram](C:\Users\ADMIN\OneDrive\Desktop\Cahier de Charge & Conception.png)
+![Use Case Diagram](C:\Users\ADMIN\OneDrive\Documents\GitHub\MedChat\docs\Conceptions\Use case diagramm.png)
 
 - **Register & login**:
   - Permettre aux utilisateurs de s'inscrire en choisissant leur rôle (étudiant, médecin, agent  de santé) et de renseigner leurs informations personnelles (nom, prénom, spécialité, etc.)
@@ -84,7 +84,7 @@ Le chatbot est capable de reconnaître les émotions, d'engager des conversation
     * Assurer une performance optimale même avec une utilisation intensive.
 
 ### Technical Specifications
-![Deployment Diagram](C:\Users\ADMIN\OneDrive\Desktop\Cahier de Charge & Conception.png)
+![Deployment Diagram](C:\Users\ADMIN\OneDrive\Documents\GitHub\MedChat\docs\Conceptions\Deployment digramm.png)
 
 #### Backend
 
@@ -107,11 +107,11 @@ Le chatbot est capable de reconnaître les émotions, d'engager des conversation
 
 ### Activity Diagram
 
-![Activity Diagram](C:\Users\ADMIN\OneDrive\Desktop\Cahier de Charge & Conception.png)
+![Activity Diagram](C:\Users\ADMIN\OneDrive\Documents\GitHub\MedChat\docs\Conceptions\Activity Diagramm.png)
 
 ### Sequence Diagram
 
-![Sequence Diagram](C:\Users\ADMIN\OneDrive\Desktop\Cahier de Charge & Conception.png)
+![Sequence Diagram](C:\Users\ADMIN\OneDrive\Documents\GitHub\MedChat\docs\Conceptions\Sequence Diagramm.png)
 
 
 Windows Server with:

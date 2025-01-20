@@ -1,0 +1,24 @@
+@startuml deployment_diagram
+node "Client" {
+  [Navigateur Web]
+}
+
+node "Serveur" {
+  [Backend (Flask)]
+  [Frontend (React)]
+}
+
+node "Base de Données" {
+  [PostgreSQL]
+}
+
+node "Service Chatbot" {
+  [Chatbot]
+}
+
+[Navigateur Web] --> [Frontend (React)]
+[Frontend (React)] --> [Backend (Flask)]
+[Backend (Flask)] --> [PostgreSQL]
+[Backend (Flask)] --> [Chatbot]
+
+@enduml
