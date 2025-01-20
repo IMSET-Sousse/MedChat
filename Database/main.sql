@@ -1,0 +1,8 @@
+CREATE DATABASE MedChat;
+GRANT ALL PRIVILEGES ON DATABASE MedChat TO postgres;
+
+CREATE TABLE MedChat (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255),
+    txt TEXT
+);
