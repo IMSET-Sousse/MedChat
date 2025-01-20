@@ -32,3 +32,4 @@ Points faibles:
 Peut être moins adapté aux personnes en bonne santé ou souffrant de maladies aiguës
 Offre peut-être moins de fonctionnalités de diagnostic
 
+Besoins fonctionnels
