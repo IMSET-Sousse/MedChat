@@ -2,8 +2,9 @@ from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 
+
 app = Flask(__name__)
-CORS(app)
+
 
 
 config = {
@@ -29,15 +30,13 @@ class conversations(db.Model):
     user_id= db.Column(db.Integer, foreign_key=True)
 
 
-@app.route('/api/notes')
-def notes():
-    all_notes = Note.query.all()
-    notes_list = [{"id": note.id, "title": note.title, "txt": note.txt} for note in all_notes]
-    return jsonify(notes_list)
+@app.route('/api/users')
+def users():
+    all_users = users.query.all()
 
-@app.route('/api/todo/<int:id>')
-def todo_id(id):
-    return jsonify(todos[id])
+@app.route('/api/users/<int:id>')
+def users_id(id):
+    return jsonify(users[id])
 
 if __name__ == '__main__':
     app.run(debug=True)
