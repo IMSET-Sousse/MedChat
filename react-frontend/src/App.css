@@ -11,7 +11,7 @@
 /* Chatbox styling */
 .chatbox {
   width: 1000px;
-  max-width: 100%;
+  max-width: 80%;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -33,7 +33,7 @@
   margin-bottom: 12px;
   padding: 10px;
   border-radius: 5px;
-  max-width: 70%;
+  max-width: 100%;
   word-wrap: break-word;
 }
 
