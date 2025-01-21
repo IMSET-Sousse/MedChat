@@ -1,8 +1,7 @@
-// Import necessary libraries
 import React, { useState, useEffect } from 'react';
 import './App.css'; // Import your CSS file
+import Messages from './components/Messages';
 
-// Chatbot Component
 const Chatbot = () => {
   const [messages, setMessages] = useState([]); // To store chat messages
   const [userInput, setUserInput] = useState(''); // To handle user input
@@ -54,13 +53,7 @@ const Chatbot = () => {
   return (
     <div className="chatbot-container">
       <div className="chatbox">
-        <div className="messages">
-          {messages.map((msg, index) => (
-            <div key={index} className={`message ${msg.sender}`}>
-              {msg.text}
-            </div>
-          ))}
-        </div>
+        <Messages messages={messages} />
         <div className="input-container">
           <input
             type="text"

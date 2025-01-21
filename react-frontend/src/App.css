@@ -20,35 +20,6 @@
   overflow: hidden;
 }
 
-/* Messages container */
-.messages {
-  flex: 1;
-  padding: 16px;
-  overflow-y: auto;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-/* Individual message styling */
-.message {
-  margin-bottom: 12px;
-  padding: 10px;
-  border-radius: 5px;
-  max-width: 100%;
-  word-wrap: break-word;
-}
-
-.message.user {
-  background-color: #e0f7fa;
-  align-self: flex-end;
-  text-align: right;
-}
-
-.message.bot {
-  background-color: #f1f8e9;
-  align-self: flex-start;
-  text-align: left;
-}
-
 /* Input container styling */
 .input-container {
   display: flex;
