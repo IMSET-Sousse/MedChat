@@ -38,8 +38,7 @@ Le chatbot est capable de reconnaître les émotions, d'engager des conversation
 
 ![Use Case Diagram](C:\Users\ADMIN\OneDrive\Documents\GitHub\MedChat\docs\Conceptions\Use case diagramm.png)
 
-- **Register & login**:
-  - Permettre aux utilisateurs de s'inscrire en choisissant leur rôle (étudiant, médecin, agent  de santé) et de renseigner leurs informations personnelles (nom, prénom, spécialité, etc.)
+
 
 
 - **Création de conversations**:
