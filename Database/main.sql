@@ -26,3 +26,4 @@ CREATE TABLE bot_responses (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+
