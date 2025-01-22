@@ -1,42 +1,49 @@
-from flask import Flask, jsonify
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
-
-
+from datetime import datetime
+import os
 
 app = Flask(__name__)
+CORS(app)
 
-
-
-config = {
-    "user" : "postgres",
-    "password" : "postgres",
-    "host" : "localhost",
-    "port" : 5432,
-    "database" : ""
-}
-
-app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{config["user"]}:{config["password"]}@{config["host"]}:{config["port"]}/{config["database"]}'
+# configuration de la base de donnée
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL','sqlite:///db.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+# This is where you'll initialize Llama 3.2
+# Example:
+# from llama import Llama
+# llm = Llama(model_path="path/to/llama-model")
 
-class users(db.Model):
-    __tablename__ = 'users'
-    user_id= db.Column(db.Integer, primary_key=True)
+@app.route('/api/chat', methods=['POST'])
+def chat():
+    data = request.json
+    message = data.get('message')
+    
+    # This is where you'll integrate Llama 3.2
+    # Example:
+    # response = llm.generate(message)
+    
+    response = {
+        'message': 'This is where Llama 3.2 will process your medical query.',
+        'timestamp': datetime.utcnow().isoformat()
+    }
+    
+    return jsonify(response)
 
-class conversations(db.Model):
-    __tablename__ = 'conversations'
-    conversations_id= db.Column(db.Integer, primary_key=True)
-    user_id= db.Column(db.Integer, foreign_key=True)
+@app.route('/api/upload', methods=['POST'])
+def upload_file():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file provided'}), 400
+        
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({'error': 'No file selected'}), 400
+        
 
-
-@app.route('/api/users')
-def users():
-    all_users = users.query.all()
-
-@app.route('/api/users/<int:id>')
-def users_id(id):
-    return jsonify(users[id])
+    return jsonify({'message': 'File uploaded successfully'})
 
 if __name__ == '__main__':
     app.run(debug=True)
