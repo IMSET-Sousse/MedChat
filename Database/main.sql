@@ -1,10 +1,6 @@
 CREATE DATABASE MedChat;
 GRANT ALL PRIVILEGES ON DATABASE MedChat TO postgres;
 
-CREATE TABLE users (
-    user_id INT AUTO_INCREMENT PRIMARY KEY,
-);
-
 CREATE TABLE conversations (
     conversation_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
