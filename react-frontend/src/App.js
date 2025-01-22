@@ -8,7 +8,6 @@ const Chatbot = () => {
   const [history, setHistory] = useState([]); // To store chat history
   const [searchTerm, setSearchTerm] = useState(''); // For search functionality
 
-  
   // Function to handle sending a message
   const sendMessage = () => {
     if (userInput.trim() === '') return; // Avoid sending empty messages
