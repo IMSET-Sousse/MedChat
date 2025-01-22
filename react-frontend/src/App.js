@@ -52,31 +52,22 @@ const Chatbot = () => {
   }, []);
 
   return (
-    <div className="main-container">
-      {/* Sidebar */}
-      <div className="sidebar">
-        <h3>Sidebar</h3>
-        {/* You can add more content to the sidebar here */}
-      </div>
-  
-      {/* Chatbot Container */}
-      <div className="chatbot-container">
-        <div className="chatbox">
-          <Messages messages={messages} />
-          <div className="input-container">
-            <input
-              type="text"
-              placeholder="Type your message..."
-              value={userInput}
-              onChange={(e) => setUserInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
-            />
-            <button onClick={sendMessage}>Send</button>
-          </div>
+    <div className="chatbot-container">
+      <div className="chatbox">
+        <Messages messages={messages} />
+        <div className="input-container">
+          <input
+            type="text"
+            placeholder="Type your message..."
+            value={userInput}
+            onChange={(e) => setUserInput(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
+          />
+          <button onClick={sendMessage}>Send</button>
         </div>
       </div>
     </div>
   );
-}  
+};
 
 export default Chatbot;
