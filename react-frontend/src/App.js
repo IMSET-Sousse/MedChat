@@ -8,6 +8,7 @@ const Chatbot = () => {
   const [userInput, setUserInput] = useState(''); // To handle user input
   const [history, setHistory] = useState([]); // To store chat history
 
+  
   // Function to handle sending a message
   const sendMessage = () => {
     if (userInput.trim() === '') return; // Avoid sending empty messages
