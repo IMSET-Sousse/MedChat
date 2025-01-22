@@ -1,0 +1,35 @@
+@startuml sequence_diagram
+actor Utilisateur
+participant "Frontend (React)" as Frontend
+participant "Backend (Flask)" as Backend
+participant "Database (PostgreSQL)" as Database
+
+Utilisateur -> Frontend: S'inscrire/Se connecter
+Frontend -> Backend: Envoyer les informations d'identification
+Backend -> Database: Vérifier les informations d'identification
+Database -> Backend: Retourner le résultat
+Backend -> Frontend: Retourner le jeton d'authentification
+Frontend -> Utilisateur: Afficher le résultat
+
+Utilisateur -> Frontend: Nouveau Chat
+Frontend -> Backend: Créer une session de chat
+Backend -> Database: Stocker la session de chat
+Database -> Backend: Retourner l'ID de session
+Backend -> Frontend: Retourner l'ID de session
+Frontend -> Utilisateur: Afficher l'interface de chat
+
+Utilisateur -> Frontend: Poser Question
+Frontend -> Backend: Envoyer la question
+Backend -> Chatbot: Traiter la question
+Chatbot -> Backend: Retourner la réponse
+Backend -> Frontend: Retourner la réponse
+Frontend -> Utilisateur: Afficher la réponse
+
+Utilisateur -> Frontend: Accéder à l'Historique
+Frontend -> Backend: Demander l'historique
+Backend -> Database: Récupérer l'historique
+Database -> Backend: Retourner l'historique
+Backend -> Frontend: Retourner l'historique
+Frontend -> Utilisateur: Afficher l'historique
+
+@enduml

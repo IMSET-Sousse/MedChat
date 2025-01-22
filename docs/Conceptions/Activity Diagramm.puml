@@ -1,0 +1,41 @@
+@startuml activity_diagram
+|Utilisateur|
+start
+:Ouvrir l'application;
+:Choisir une action;
+
+if (S'inscrire?) then (oui)
+  :Entrer les informations d'inscription;
+  :Envoyer les informations d'inscription;
+  :Afficher le message de succès;
+else (non)
+  if (Se connecter?) then (oui)
+    :Entrer les informations de connexion;
+    :Envoyer les informations de connexion;
+    :Afficher le tableau de bord;
+  else (non)
+    :Afficher le tableau de bord;
+  endif
+endif
+
+:Choisir une action;
+
+if (Nouveau Chat?) then (oui)
+  :Créer une nouvelle session de chat;
+  :Afficher l'interface de chat;
+else (non)
+  if (Poser Question?) then (oui)
+    :Entrer la question;
+    :Envoyer la question;
+    :Recevoir la réponse du chatbot;
+    :Afficher la réponse;
+  else (non)
+    if (Accéder à l'Historique?) then (oui)
+      :Demander l'historique;
+      :Afficher l'historique;
+    endif
+  endif
+endif
+
+stop
+@enduml
