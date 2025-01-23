@@ -1,74 +1,79 @@
-import React, { useState, useEffect } from 'react';
-import './App.css'; // Import your CSS file
-import Messages from './components/Messages';
-import Sidebar from './components/Sidebar';
+import React, { useState } from "react";
+import "./App.css";
 
-const Chatbot = () => {
-  const [messages, setMessages] = useState([]); // To store chat messages
-  const [userInput, setUserInput] = useState(''); // To handle user input
-  const [history, setHistory] = useState([]); // To store chat history
+const ChatbotUI = () => {
+  const initialMessages = [
+    { sender: "bot", text: "Hello, how can I assist you today?" },
+  ];
 
-  
-  // Function to handle sending a message
-  const sendMessage = () => {
-    if (userInput.trim() === '') return; // Avoid sending empty messages
+  const [messages, setMessages] = useState(initialMessages);
+  const [input, setInput] = useState("");
 
-    const newMessages = [
-      ...messages,
-      { sender: 'user', text: userInput },
-      { sender: 'bot', text: getBotResponse(userInput) },
-    ];
-    setMessages(newMessages);
-    setUserInput('');
-    saveToHistory(newMessages);
-  };
+  const handleSend = () => {
+    if (input.trim() !== "") {
+      setMessages([...messages, { sender: "user", text: input }]);
 
-  // Function to simulate bot response (customize for healthcare specifics)
-  const getBotResponse = (input) => {
-    if (input.toLowerCase().includes('symptom')) {
-      return 'Please describe your symptoms in detail.';
-    } else if (input.toLowerCase().includes('appointment')) {
-      return 'You can book an appointment by visiting our website or calling our clinic.';
-    }
-    return 'I am here to help with your healthcare questions. Could you elaborate?';
-  };
+      // Simulating bot response
+      setTimeout(() => {
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          { sender: "bot", text: "Let me guide you to protect your health!" },
+        ]);
+      }, 1000);
 
-  // Function to save chat to history
-  const saveToHistory = (newMessages) => {
-    const updatedHistory = [...history, ...newMessages];
-    setHistory(updatedHistory);
-    localStorage.setItem('chatHistory', JSON.stringify(updatedHistory));
-  };
-
-  // Function to load chat history
-  const loadHistory = () => {
-    const savedHistory = localStorage.getItem('chatHistory');
-    if (savedHistory) {
-      setHistory(JSON.parse(savedHistory));
+      setInput("");
     }
   };
 
-  useEffect(() => {
-    loadHistory();
-  }, []);
+  const handleNewChat = () => {
+    setMessages(initialMessages);
+  };
 
   return (
     <div className="chatbot-container">
-      <div className="chatbox">
-        <Messages messages={messages} />
-        <div className="input-container">
+      {/* Sidebar */}
+      <div className="sidebar">
+        <div className="search-new-chat">
+          <button className="new-chat-button" onClick={handleNewChat}>+ New Chat</button>
           <input
             type="text"
-            placeholder="Type your message..."
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
+            className="search-input"
+            placeholder="Search..."
           />
-          <button onClick={sendMessage}>Send</button>
+        </div>
+        <div className="chat-history">
+          <p className="history-item">Chat 1</p>
+          <p className="history-item">Chat 2</p>
+          <p className="history-item">Chat 3</p>
+        </div>
+      </div>
+
+      {/* Chat Section */}
+      <div className="chat-section">
+        <div className="chat-messages">
+          {messages.map((message, index) => (
+            <div
+              key={index}
+              className={`message ${message.sender}`}
+            >
+              {message.text}
+            </div>
+          ))}
+        </div>
+        <div className="chat-input-container">
+          <input
+            type="text"
+            className="chat-input"
+            placeholder="Type your message..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleSend()}
+          />
+          <button className="send-button" onClick={handleSend}>Send</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Chatbot;
+export default ChatbotUI;
