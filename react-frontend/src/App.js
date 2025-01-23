@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css'; 
-import Messages from './components/Messages';
+import Conversation from './components/Conversation';
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
@@ -48,7 +48,7 @@ const Chatbot = () => {
 
   return (
     <div className="Chatbot">
-      <Messages messages={messages} />
+      <Conversation messages={messages} />
       <form onSubmit={handleSubmit}>
         <input
           type="text"

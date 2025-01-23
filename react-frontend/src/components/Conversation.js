@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ChatBox({ text, setText, output }) {
+function Conversation({ text, setText, output }) {
   return (
     <div>
       <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
@@ -10,4 +10,4 @@ function ChatBox({ text, setText, output }) {
   );
 }
 
-export default ChatBox;
+export default Conversation;
