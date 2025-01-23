@@ -1,89 +1,89 @@
-/* General styling for the chatbot container */
-.chatbot-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f4f4f9;
-  font-family: Arial, sans-serif;
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
 }
 
-/* Chatbox styling */
-.chatbox {
-  width: 1000px;
-  max-width: 80%;
+/* App Container */
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Input container styling */
-.input-container {
-  display: flex;
-  padding: 8px;
-  border-top: 1px solid #e0e0e0;
-  background-color: #fafafa;
+/* Header */
+h1 {
+  text-align: center;
+  color: #007bff;
 }
 
+/* Search Bar */
 input[type="text"] {
-  flex: 1;
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  outline: none;
-  font-size: 14px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s;
 }
 
 input[type="text"]:focus {
-  border-color: #2196f3;
+  border-color: #007bff;
+  outline: none;
 }
 
-button {
-  padding: 10px 16px;
-  margin-left: 8px;
-  background-color: #2196f3;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #1976d2;
-}
-
-/* Scrollbar styling for the messages container */
-.messages::-webkit-scrollbar {
-  width: 8px;
-}
-
-.messages::-webkit-scrollbar-thumb {
-  background-color: #b0bec5;
+/* Chat Box */
+.chat-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  height: 300px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
   border-radius: 4px;
 }
 
-.messages::-webkit-scrollbar-thumb:hover {
-  background-color: #90a4ae;
+/* Message */
+.message {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #e7f3ff;
+  border-left: 5px solid #007bff;
 }
 
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Conversation History */
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
+li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+li:last-child {
+  border-bottom: none;
+}
+
+/* File Share */
+input[type="file"] {
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .app {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .chat-box {
+    height: 200px;
   }
 }
